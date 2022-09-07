@@ -1,0 +1,198 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: o;
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-img,
+.child,
+.img-1,
+.img-2,
+.content-child-icon,
+.content-child-para {
+    position: absolute;
+}
+
+.container {
+    position: relative;
+    margin: 30rem auto 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.child-img {
+    width: 100px;
+    height: 100px;
+    background-color: hsl(221, 61%, 22%);
+    color: white;
+}
+
+
+.img-2 {
+    visibility: hidden;
+}
+
+.child-img:hover .img-1 {
+    visibility: hidden;
+}
+
+.child-img:hover .img-2 {
+    visibility: visible;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* from here you control the rotate or animation */
+
+.container{
+    animation: rotation 80s infinite;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.container:hover {
+    animation-play-state: paused;
+}
+
+.child-1 {
+    background-color: hsl(60, 36%, 21%);
+    transform: translate(300px, 0);
+}
+
+.child-2 {
+    background-color: hsl(36, 55%, 47%);
+    transform: translate(205px, 205px);
+}
+
+.child-3 {
+    background-color: hsl(293, 60%, 37%);
+    transform: translate(0, 300px);
+}
+
+.child-4 {
+    background-color: hsl(261, 47%, 39%);
+    transform: translate(-205px, 205px);
+}
+
+.child-5 {
+    background-color: hsl(204, 65%, 28%);
+    transform: translate(-300px, 0);
+}
+
+.child-6 {
+    background-color: hsl(138, 75%, 37%);
+    transform: translate(-205px, -205px);
+}
+
+.child-7 {
+    background-color: hsl(71, 68%, 34%);
+    z-index: 9999;
+    transform: translate(0px, -300px);
+}
+
+.child-8 {
+    background-color: hsl(3, 52%, 22%);
+    transform: translate(205px, -205px);
+}
+
+
+/* from here you control the rotate or animation for the content  */
+
+.reverse-animation {
+    animation: rotation2 80s infinite;
+}
+
+.container:hover .reverse-animation {
+    animation-play-state: paused;
+}
+
+@keyframes rotation2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+}
+
+/*.child-img {
+    animation: rotation2 80s infinite;
+}
+
+.container:hover .child-img {
+    animation-play-state: paused;
+}
+
+@keyframes rotation2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+}
+
+ .content-child-icon {
+    animation: rotation3 80s infinite;
+}
+
+.container:hover .content-child-icon {
+    animation-play-state: paused;
+}
+
+@keyframes rotation3 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+}
+
+.content-child-para {
+    animation: rotation4 80s infinite;
+}
+
+.container:hover .content-child-para {
+    animation-play-state: paused;
+}
+
+@keyframes rotation4 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
+    }
+} */
+
+.content-child-para {
+    visibility: hidden;
+}
+
+.child:hover .content-child-icon {
+    visibility: hidden;
+}
+
+.child:hover .content-child-para {
+    visibility: visible;
+    color: white;
+}
